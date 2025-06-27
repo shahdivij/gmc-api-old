@@ -25,6 +25,9 @@ build/Release
 # Dependency directory
 node_modules
 
+GoMotorCar1
+
+
 # Debug log from npm
 npm-debug.log
 

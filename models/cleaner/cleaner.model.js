@@ -35,13 +35,13 @@ const cleanerAddressSchema = mongoose.Schema({
 const cleanerPictureSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Image name is required."],
+        required: false,
         lowercase: true,
         trim: true
     },
     image_data: {
         type: String,
-        required: [true, "Image data is required."]
+        required: false
     }
 })
 
@@ -71,7 +71,8 @@ const cleanerSchema = mongoose.Schema({
         required: [true, "Cleaner approval status is required."]
     },
     profile_picture: {
-        type: cleanerPictureSchema
+        type: cleanerPictureSchema,
+        required: false
     },
     address: {
         type: cleanerAddressSchema,

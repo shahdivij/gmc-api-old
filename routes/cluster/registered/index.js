@@ -25,8 +25,6 @@ const validators = () => {
         body("address.state").trim().notEmpty().withMessage("Cluster Address State is required"),
         body("address.country").trim().notEmpty().withMessage("Cluster Address Country is required"),
         body("address.zip_code").trim().notEmpty().withMessage("Cluster Address Zip Code is required"),
-        body("cluster_picture.name").trim().notEmpty().withMessage("Cluster Picture Name is required"),
-        body("cluster_picture.image_data").trim().notEmpty().withMessage("Cluster Picture Image Data is required"),
         body("geo_location").notEmpty().withMessage("Goe location is required."),
         body("geo_location.longitude").notEmpty().withMessage("Goe location longitude is required."),
         body("geo_location.latitude").notEmpty().withMessage("Goe location latitude is required."),

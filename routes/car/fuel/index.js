@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 }).post("/", async (req,res) => {
     let fuel_types_data = req.body;
     if(fuel_types_data){
-        if(!fuel_types_data.name || !(fuel_types_data.image && fuel_types_data.image.name && fuel_types_data.image.image_data)){
+        if(!fuel_types_data.name){
             return res.status(400).send({
                 success: false,
                 statusCode: 400,

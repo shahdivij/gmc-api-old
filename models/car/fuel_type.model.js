@@ -4,13 +4,13 @@ const CONSTANT = require('./../../utility/constants')
 const fuelImageSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Image name is required."],
+        required: false,
         lowercase: true,
         trim: true
     },
     image_data: {
         type: String,
-        required: [true, "Image data is required."]
+        required: false
     }
 })
 
@@ -23,7 +23,7 @@ const fuelTypeSchema = mongoose.Schema({
     },
     image: {
         type: fuelImageSchema,
-        required: [true, "Car fuel image is required."],
+        required: false,
         unique: true
     },
     created_at: {

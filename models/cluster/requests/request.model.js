@@ -34,13 +34,13 @@ const clusterAddressSchema = mongoose.Schema({
 const clusterPictureSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Image name is required."],
+        required: false,
         lowercase: true,
         trim: true
     },
     image_data: {
         type: String,
-        required: [true, "Image data is required."]
+        required: false
     }
 })
 
@@ -93,6 +93,7 @@ const requestSchema = mongoose.Schema({
     },
     cluster_picture: {
         type: clusterPictureSchema,
+        required: false,
         default: null
     },
     created_at: {

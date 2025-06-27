@@ -29,8 +29,6 @@ const bodyValidators = () => {
         body("address.state").trim().notEmpty().withMessage("Cleaner Address State is required"),
         body("address.country").trim().notEmpty().withMessage("Cleaner Address Country is required"),
         body("address.zip_code").trim().notEmpty().withMessage("Cleaner Address Zip Code is required"),
-        body("cleaner_picture.name").trim().notEmpty().withMessage("Cleaner Picture Name is required"),
-        body("cleaner_picture.image_data").trim().notEmpty().withMessage("Cleaner Picture Image Data is required"),
         body('is_approved').optional().default(false)
     ]
 }

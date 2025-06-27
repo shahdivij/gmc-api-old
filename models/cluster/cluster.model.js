@@ -45,13 +45,13 @@ const clusterAddressSchema = mongoose.Schema({
 const clusterPictureSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Image name is required."],
+        required: false,
         lowercase: true,
         trim: true
     },
     image_data: {
         type: String,
-        required: [true, "Image data is required."]
+        required: false
     }
 })
 
@@ -90,7 +90,7 @@ const clusterSchema = mongoose.Schema({
     },
     cluster_picture: {
         type: clusterPictureSchema,
-        required: true
+        required: false
     },
     qr_code_series: {
         type: mongoose.Schema.Types.ObjectId,
